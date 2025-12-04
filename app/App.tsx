@@ -45,7 +45,7 @@ export default function App() {
               </div>
               <div>
                 <h1 className="text-xl font-bold text-slate-900">
-                  Support Assistant
+                  E-commerce Support AI Agent
                 </h1>
                 <p className="text-sm text-slate-600">
                   How can we help you today?
@@ -68,14 +68,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="w-full border-t border-slate-200 bg-white/50 backdrop-blur-sm py-4">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-slate-600">
-            Powered by OpenAI ChatKit • Available 24/7
-          </p>
-        </div>
-      </footer>
     </main>
   );
 }
