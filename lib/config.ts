@@ -7,15 +7,30 @@ export const CREATE_SESSION_ENDPOINT = "/api/create-session";
 
 export const STARTER_PROMPTS: StartScreenPrompt[] = [
   {
-    label: "What can you do?",
-    prompt: "What can you do?",
+    label: "Track my order",
+    prompt: "I want to track my order status",
+    icon: "circle-question",
+  },
+  {
+    label: "Return or exchange",
+    prompt: "I need help with a return or exchange",
+    icon: "circle-question",
+  },
+  {
+    label: "Product questions",
+    prompt: "I have questions about a product",
+    icon: "circle-question",
+  },
+  {
+    label: "Payment issues",
+    prompt: "I'm having trouble with payment",
     icon: "circle-question",
   },
 ];
 
-export const PLACEHOLDER_INPUT = "Ask anything...";
+export const PLACEHOLDER_INPUT = "Ask about orders, products, returns, or anything else...";
 
-export const GREETING = "How can I help you today?";
+export const GREETING = "Hello! I'm here to help with your e-commerce questions. What can I assist you with today?";
 
 export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
   color: {
@@ -25,8 +40,8 @@ export const getThemeConfig = (theme: ColorScheme): ThemeOption => ({
       shade: theme === "dark" ? -1 : -4,
     },
     accent: {
-      primary: theme === "dark" ? "#f1f5f9" : "#0f172a",
-      level: 1,
+      primary: theme === "dark" ? "#60a5fa" : "#3b82f6",
+      level: 2,
     },
   },
   radius: "round",
