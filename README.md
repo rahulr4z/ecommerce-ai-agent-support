@@ -54,6 +54,31 @@ Visit `http://localhost:3000` and start chatting. Use the prompts on the start s
 
 ### 5. Deploy your app
 
+#### Deploy to Vercel (Recommended)
+
+1. **Push your code to GitHub** (or your preferred Git provider)
+
+2. **Import your project to Vercel:**
+   - Go to [vercel.com](https://vercel.com) and sign in
+   - Click "Add New..." → "Project"
+   - Import your Git repository
+   - Vercel will automatically detect Next.js
+
+3. **Configure Environment Variables:**
+   In the Vercel project settings, add the following environment variables:
+   - `OPENAI_API_KEY` - Your OpenAI API key
+   - `NEXT_PUBLIC_CHATKIT_WORKFLOW_ID` - Your ChatKit workflow ID (starts with `wf_...`)
+   - `CHATKIT_API_BASE` (optional) - Custom API base URL, defaults to `https://api.openai.com`
+
+4. **Deploy:**
+   - Click "Deploy" and Vercel will build and deploy your app
+   - Your app will be available at `https://your-project.vercel.app`
+
+5. **Domain Allowlist:**
+   Before using your deployed app, you need to verify the domain by adding it to the [Domain allowlist](https://platform.openai.com/settings/organization/security/domain-allowlist) on your OpenAI dashboard. Add your Vercel domain (e.g., `your-project.vercel.app`).
+
+#### Manual Build
+
 ```bash
 npm run build
 ```
