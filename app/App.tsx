@@ -5,7 +5,9 @@ import { ChatKitPanel, type FactAction } from "@/components/ChatKitPanel";
 import { useColorScheme } from "@/hooks/useColorScheme";
 
 export default function App() {
-  const { scheme, setScheme } = useColorScheme();
+  // Force light mode
+  const { setScheme } = useColorScheme();
+  const scheme = "light" as const;
 
   const handleWidgetAction = useCallback(async (action: FactAction) => {
     if (process.env.NODE_ENV !== "production") {
@@ -20,9 +22,9 @@ export default function App() {
   }, []);
 
   return (
-    <main className="flex min-h-screen flex-col bg-gradient-to-br from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <main className="flex min-h-screen flex-col bg-gradient-to-br from-slate-50 via-white to-slate-50">
       {/* Header Section */}
-      <header className="w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-10">
+      <header className="w-full border-b border-slate-200 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -42,10 +44,10 @@ export default function App() {
                 </svg>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+                <h1 className="text-xl font-bold text-slate-900">
                   Support Assistant
                 </h1>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
+                <p className="text-sm text-slate-600">
                   How can we help you today?
                 </p>
               </div>
@@ -67,9 +69,9 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <footer className="w-full border-t border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm py-4">
+      <footer className="w-full border-t border-slate-200 bg-white/50 backdrop-blur-sm py-4">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-slate-600 dark:text-slate-400">
+          <p className="text-center text-sm text-slate-600">
             Powered by OpenAI ChatKit • Available 24/7
           </p>
         </div>
